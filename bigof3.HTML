@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col col-12 col-sm-6 col-lg-12">
+        <form>
+            <br><br>
+            <div class="col-7 col-sm-6">
+           <p ><b>PLEASE ENTER THREE DIFFERENT INTEGERS</b> </p>  <br><br>
+            NUMBER1: <input type="text" id="n1" class="form-control col-5 col-sm-6"><br>
+            NUMBER2: <input type="text" id="n2" class="form-control col-5 col-sm-6"><br>
+            NUMBER3: <input type="text" id="n3" class="form-control col-5 col-sm-6"><br>  
+        </form>
+        <button type="button" class="btn btn-success" onclick="big3();">BIG IS</button>
+       <br><br>
+         <p id="reslt" style="background-color: palegoldenrod;" class="form-control col-8">  </p>
+    </div>
+        <script>
+            function big3()
+            {
+                var x=parseInt(document.getElementById("n1").value);
+                var y=parseInt(document.getElementById("n2").value);
+                var z=parseInt(document.getElementById("n3").value);
+                var n;
+               
+             if(x==y&&y==z)
+             {
+                 n="PLEASE ENTER DIFFERENT NUMBERS";
+             }
+             
+             if(x>y&&x>z)
+             {
+                 n="FIRST NUMBER IS BIG";
+             }
+             if(y>x&&y>z)
+             {
+                 n="SECOND NUMBER IS BIG";
+             }
+             if(z>x&&z>y)
+             {
+                 n="THIRD NUMBER IS BIG";
+             }
+             document.getElementById("reslt").innerHTML=n;
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>DIVISIBLE BY 8?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <br><br>
+        <b><p>ENTER THE NUMBER TO BE CHECKED <br><br><input type="text " id="n1" class="form-control col-5 col-sm-5"></p><b>
+        <br>    
+        <button type="button" onclick="div();" class="btn btn-success ">CHECK</button>         
+        <br>
+        <br>
+<b><p id="reslt" class="col-6 col-sm-8 col-lg-7"></p></b>
+</div> 
+<script>
+    function div()
+    {
+    var x=(document.getElementById("n1").value);
+    var z=parseInt (x);
+    var r;
+        if(x%8==0)
+    {
+        r="THE GIVEN NUMBER IS DIVISIBLE BY 8";
+    }
+    else
+    {
+        r="THE GIVEN NUMBER IS NOT DIVISIBLE BY 8";
+    }
+    if(x==""){
+        r="PLEASE ENTER A NUMBER";
+    }
+    
+    document.getElementById("reslt").innerHTML=r;
+    }
+    
+</script>   
+</body>
+</html>
